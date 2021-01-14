@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRUDDemoWPFApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="CRUD WPF App" Height="558.5" Width="820">
+    <Grid Margin="0,0,21,11">
+        <Button x:Name="btnCourses" Content="COURSES" HorizontalAlignment="Left" Height="31" Margin="67,36,0,0" VerticalAlignment="Top" Width="248" FontSize="16" FontWeight="Bold" Click="BtnCourses_Click"/>
+        <Button x:Name="btnStudents" Content="STUDENTS" HorizontalAlignment="Left" Height="31" Margin="472,36,0,0" VerticalAlignment="Top" Width="248" FontSize="16" FontWeight="Bold" Click="BtnStudents_Click"/>
+        <DataGrid x:Name="dgvCourses" HorizontalAlignment="Left" Height="182" Margin="10,92,0,0" VerticalAlignment="Top" Width="364" SelectionChanged="DgvCourses_SelectionChanged" CanUserAddRows="false" />
+        <DataGrid x:Name="dgvStudents" HorizontalAlignment="Left" Height="182" Margin="404,92,0,0" VerticalAlignment="Top" Width="381" SelectionChanged="DgvStudents_SelectionChanged" CanUserAddRows="false" />
+        <Label x:Name="lblCourseSelected" Content="Selected Course :" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="txtSelectedCourse" HorizontalAlignment="Left" Height="23" Margin="115,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"/>
+        <Label x:Name="lblSelectedStudent" Content="Selected Student :" HorizontalAlignment="Left" Margin="487,288,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox x:Name="txtSelectedStudent" HorizontalAlignment="Left" Height="23" Margin="596,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+        <Button x:Name="btnLink" Content="Join Course" HorizontalAlignment="Left" Margin="334,291,0,0" VerticalAlignment="Top" Width="112" Height="23" Click="BtnLink_Click"/>
+        <DataGrid x:Name="dgvLinked" HorizontalAlignment="Left" Height="180" Margin="10,330,0,0" VerticalAlignment="Top" Width="774" CanUserAddRows="false" />
+
     </Grid>
 </Window>
